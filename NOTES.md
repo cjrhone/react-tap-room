@@ -25,4 +25,5 @@ Overall `REACT` has a better workflow to me. Even though we're combining Javascr
 
 ## Next Step ##
 
-Because I'm unsure how to implement functionality
+### 6/29/18
+Because I'm unsure how to implement functionality, my first objective will be to display my main `App` and `Header`. Stretch goal will be to include a clickable link that routes to `NewTapForm` with input boxes. 
