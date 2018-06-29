@@ -40,7 +40,6 @@ function App(props){
           </div>
         </a>
       </div>
-      <MySampleComponent/>
       <Header/>
       <Switch>
         <Route exact path='/' component={TapList} />
@@ -52,7 +51,7 @@ function App(props){
 }
 
 App.propTypes = {
-  location: PropTypes.object
+  name: PropTypes.object
 };
 
 export default App;

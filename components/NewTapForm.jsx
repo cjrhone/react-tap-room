@@ -15,10 +15,10 @@ function NewTapForm() {
         <textarea
           id='price'
           placeholder='Price' />
-        <button type='submit'>Help!</button>
+        <button type='submit'>Create</button>
       </form>
     </div>
   );
 }
 
-export default NewTicketForm;
+export default NewTapForm;

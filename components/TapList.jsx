@@ -1,21 +1,21 @@
 import React from 'react';
-import Ticket from './Ticket';
+import Tap from './Tap';
 
 var masterTicketList = [
   {
-    names: 'Thato and Haley',
-    location: '3A',
-    issue: 'Firebase won\'t save record. Halp'
+    name: 'Royal Crowne',
+    brand: 'Scotch',
+    price: '9.99'
   },
   {
-    names: 'Sleater and Kinney',
-    location: '4B',
-    issue: 'Fox image no displaying. WTF!'
+    name: 'Grey Goose',
+    brand: 'Vodka',
+    price: '13.89'
   },
   {
-    names: 'Imani & Jacob',
-    location: '9F',
-    issue: 'we have no idea dude'
+    name: 'Honey Whisky',
+    brand: 'Jack Daniels',
+    price: '18.99'
   }
 ];
 
@@ -25,7 +25,7 @@ function TapList(){
     <div>
       <hr/>
       {masterTicketList.map((tap, index) =>
-        <Ticket name={tap.name}
+        <Tap name={tap.name}
           brand={tap.brand}
           price={tap.price}
           key={index} />

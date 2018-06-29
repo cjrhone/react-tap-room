@@ -6,7 +6,7 @@ function Tap(props){
     <div>
       <style global jsx>{`
         div {
-          background-color: #FFB81C;
+          background-color: #00bfff;
         }
         h3:hover {
           background-color: grey;
