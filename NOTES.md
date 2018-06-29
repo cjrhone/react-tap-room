@@ -9,9 +9,19 @@ A big component working on the tap-room is knowing the differences between react
 
 ### Installation ###
 
-`REACT` and `Angular` are both equal in installation/setup. They both require hefty amount of installations before use.
+`REACT` and `Angular` are both equal in installation/setup. They both require hefty amounts of installations before use.
 
-React requires `npm install react@15.5.4 react-dom@15.5.4 --save ` to install react and the react dom `npm install webpack@3.4.0 -g` to install webpack globally `npm install react-router-dom@4.0.0 --save` to install the router `$ npm install eslint -g` and `$ npm install eslint-plugin-react -g` to install linter, which is a debugger and requires quite a bit of configuring to work decently. And lastly react hot loader (HMR) which auto-updates our live server `npm install react-hot-loader@3.0.0-beta.7 --save-dev`
+React requires `npm install react@15.5.4 react-dom@15.5.4 --save ` to install react and the react dom `npm install webpack@3.4.0 -g` to install webpack globally `npm install react-router-dom@4.0.0 --save` to install the router `$ npm install eslint -g` and `$ npm install eslint-plugin-react -g` to install linter, which is a debugger and requires quite a bit of configuring to work well. And lastly react hot loader (HMR) which auto-updates our live server `npm install react-hot-loader@3.0.0-beta.7 --save-dev`
+
+Additional:
+`$ npm install prop-types@15.5.10 --save`
+for including prop-types.
+`$ npm install webpack-dev-server@2.5.0 -g
+$ npm install webpack-dev-server@2.5.0 --save-dev`
+A different version of webpack, depending on necessity
+
+`npm install html-webpack-plugin@2.29.0 --save-dev`
+dependency needed for HMR
 
 ### Work Flow ###
 
@@ -26,4 +36,4 @@ Overall `REACT` has a better workflow to me. Even though we're combining Javascr
 ## Next Step ##
 
 ### 6/29/18
-Because I'm unsure how to implement functionality, my first objective will be to display my main `App` and `Header`. Stretch goal will be to include a clickable link that routes to `NewTapForm` with input boxes. 
+Because I'm unsure how to implement functionality, my first objective will be to display my main `App` and `Header`. Stretch goal will be to include a clickable link that routes to `NewTapForm` with input boxes.
