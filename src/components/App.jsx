@@ -8,10 +8,12 @@ function App(){
   return (
     <div>
       <Header/>
+
       <Switch>
         <Route exact path='/' component={TapList} />
         <Route path='/newtap' component={NewTapForm}
       </Switch>
+      <TapList/>
     </div>
   );
 }
