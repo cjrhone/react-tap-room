@@ -14,6 +14,9 @@ Display the name of the beverage, location, and alcohol level of nearby beverage
 
 Can also create a new tap by navigation to `/newtapform`
 
+## Diagram ##
+![picture alt](TapRoomFlowchart.png "Tap Room Flowchart")
+
 ## Installation
 
 When repository has been downloaded, change directory to root folder and run `npm install` to install necessary packages to run accurately. If files are changed or updated, run `webpack` in the command line.
