@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function NewTapForm() {
+function NewTapForm(props) {
   let _name = null;
   let _brand = null;
   let _price = null;
@@ -10,6 +11,7 @@ function NewTapForm() {
     console.log(_name.value);
     console.log(_brand.value);
     console.log(_price.value);
+    props.onNewTapCreation({name: _name.value, brand: _brand.value, price: _price.value});
     _name.value = '';
     _brand.value = '';
     _price.value = '';
@@ -37,5 +39,9 @@ function NewTapForm() {
     </div>
   );
 }
+
+NewTapForm.propTypes = {
+  onNewTapCreation: PropTypes.func
+};
 
 export default NewTapForm;

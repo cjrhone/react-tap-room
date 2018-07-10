@@ -1,37 +1,23 @@
 import React from 'react';
 import Tap from './Tap';
+import PropTypes from 'prop-types';
 
-var masterTicketList = [
-  {
-    name: 'Royal Crowne',
-    brand: 'Scotch',
-    price: '9.99'
-  },
-  {
-    name: 'Grey Goose',
-    brand: 'Vodka',
-    price: '13.89'
-  },
-  {
-    name: 'Honey Whisky',
-    brand: 'Jack Daniels',
-    price: '18.99'
-  }
-];
-
-
-function TapList(){
-  return(
+function TapList(props){
+  return (
     <div>
       <hr/>
-      {masterTicketList.map((tap, index) =>
-        <Tap name={tap.name}
-          brand={tap.brand}
-          price={tap.price}
-          key={index} />
+      {props.tapList.map((thisTap, index) =>
+        <Tap name={thisTap.name}
+          brand={thisTap.brand}
+          price={thisTap.price}
+          key={index}/>
       )}
     </div>
   );
 }
+
+TapList.propTypes = {
+  tapList: PropTypes.array
+};
 
 export default TapList;

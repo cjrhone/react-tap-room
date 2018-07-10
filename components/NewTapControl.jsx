@@ -1,6 +1,7 @@
 import React from 'react';
 import ConfirmationQuestions from './ConfirmationQuestions';
 import NewTapForm from './NewTapForm';
+import PropTypes from 'prop-types';
 
 class NewTapControl extends React.Component {
 
@@ -19,9 +20,10 @@ class NewTapControl extends React.Component {
   render(){
     let currentlyVisibleContent = null;
     if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <NewTapForm />;
+      currentlyVisibleContent = <NewTapForm onNewTapCreation={this.props.onNewTapCreation}/>;
     } else {
-      currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation} />
+      currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation=
+        {this.handleTroubleshootingConfirmation} />;
     }
 
     return (
@@ -31,5 +33,9 @@ class NewTapControl extends React.Component {
     );
   }
 }
+
+NewTapControl.propTypes = {
+  onNewTapCreation: PropTypes.func
+};
 
 export default NewTapControl;
