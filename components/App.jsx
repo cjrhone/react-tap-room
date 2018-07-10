@@ -4,6 +4,7 @@ import TapList from './TapList';
 import { Switch, Route } from 'react-router-dom';
 import NewTapControl from './NewTapControl';
 import Error404 from './Error404';
+import Admin from './Admin';
 
 class App extends React.Component {
 
@@ -59,6 +60,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' render={()=><TapList tapList={this.state.masterTapList} />} />
           <Route path='/newtap' render={()=><NewTapControl onNewTapCreation={this.handleAddingNewTapToList} />} />
+          <Route path='/admin' render={() =><Admin tapList={this.state.masterTapList} />} />
           <Route component={Error404} />
         </Switch>
       </div>
