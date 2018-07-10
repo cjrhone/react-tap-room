@@ -37,3 +37,12 @@ Overall `REACT` has a better workflow to me. Even though we're combining Javascr
 
 ### 6/29/18
 Because I'm unsure how to implement functionality, my first objective will be to display my main `App` and `Header`. Stretch goal will be to include a clickable link that routes to `NewTapForm` with input boxes.
+
+### 7/10/18
+Development this week will consist mostly of lifting states, as in, passing information from one component to another. Because of the "data down, action up" method React and Angular follow, we have to create methods within the app that passes information to the parent. In this case, the parent of TapList, NewTapControl and NewTapForm will be rendered through the `App` component. ( as seen in our diagram)
+
+Firstly, In our `NewTapControl` component we're creating `handleTroubleshootingConfirmation` to set our `formVisibleOnPage: true` once the ConfirmationQuestions have been confirmed. Our `NewTapForm` is instantiated upon confirmation as `{currentlyVisibleContent}`
+
+Second, In our `NewTapForm` component we will be creating user inputted refs, and on form submit we're running the function `handleNewTapFormSubmission` which pushes our information through a function `props.onNewTapCreation`  -- those values are imported through `NewTapControl` to  `App`
+
+Finally our  `App` component is where we're putting everything together. In our `<Route exact path='/'` we are rendering our current `masterTapList`, which is also being rendered on our Admin component `<Route path='/admin'`. Here we are also creating a route for `<Route path='/newtap'`. Remember `props.onNewTapCreation` which pushes our information? When that is called -- we run the method `handleAddingNewTapToList` which slices the original masterTapList, pushes user inputted newTap information, and sets the state of masterTapList as the newest, most updated list. ( i.e: `this.setState({masterTapList: newMasterTapList});`)
