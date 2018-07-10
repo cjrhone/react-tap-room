@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
 
 function NewTapForm(props) {
   let _name = null;
@@ -11,7 +12,11 @@ function NewTapForm(props) {
     console.log(_name.value);
     console.log(_brand.value);
     console.log(_price.value);
-    props.onNewTapCreation({name: _name.value, brand: _brand.value, price: _price.value});
+    props.onNewTapCreation({
+      name: _name.value,
+      brand: _brand.value,
+      price: _price.value,
+      id: v4() });
     _name.value = '';
     _brand.value = '';
     _price.value = '';
