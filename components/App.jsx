@@ -3,6 +3,7 @@ import Header from './Header';
 import TapList from './TapList';
 import { Switch, Route } from 'react-router-dom';
 import NewTapForm from './NewTapForm';
+import NewTapControl from './NewTapControl'
 import Error404 from './Error404';
 import PropTypes from 'prop-types';
 

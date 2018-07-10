@@ -1,39 +1,28 @@
 import React from 'react';
-import ConfirmationQuestions from './ConfirmationQuestions';
-import NewTapForm from './NewTapForm';
-import PropTypes from 'prop-types';
 
-class NewTapForm extends React.Component {
+class NewTapControl extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
       formVisibleOnPage: false
     };
-    this.handleTroubleshootingConfirmation = this.handleTroubleshootingConfirmation.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleTroubleshootingConfirmation(){
+  handleClick(){
     this.setState({formVisibleOnPage: true});
+    console.log('formVisibleOnPage is currently set to: ' + this.state.formVisibleOnPage);
   }
 
   render(){
-    let currentlyVisibleContent = null;
-    if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <NewTapForm onNewTapCreation={this.props.onNewTapCreation}/>;
-    } else {
-      currentlyVisibleContent = <ConfirmationQuestions onTrounleshootingConfirmation={this.handleTroubleshootingConfirmation}/>;
-    }
     return (
       <div>
-        {currentlyVisibleContent}
+        <p>This is the NewTapControl component!</p>
+        <strong onClick={this.handleClick}>Click me to change my state!</strong>
       </div>
     );
   }
 }
-
-NewTapControl.propTypes = {
-  onNewTapCreation: PropTypes.func
-};
 
 export default NewTapControl;
