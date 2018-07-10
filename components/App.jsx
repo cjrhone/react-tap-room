@@ -43,7 +43,7 @@ function App(props){
       <Header/>
       <Switch>
         <Route exact path='/' component={TapList} />
-        <Route path='/newtap' component={NewTapForm} />
+        <Route path='/newtap' component={NewTapControl} />
         <Route component={Error404} />
       </Switch>
     </div>
