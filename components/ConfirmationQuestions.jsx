@@ -1,12 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function ConfirmationQuestions(){
+function ConfirmationQuestions(props){
   return (
     <div>
       <p>Are you over the legal age?</p>
-      <button>Yes</button>
+      <button onClick={props.onTroubleshootingConfirmation}>Yes</button>
     </div>
   );
 }
+
+ConfirmationQuestions.propTypes = {
+  onTroubleshootingConfirmation: PropTypes.func
+};
 
 export default ConfirmationQuestions;
